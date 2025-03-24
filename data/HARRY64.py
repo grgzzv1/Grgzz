@@ -3,25 +3,17 @@
 #-----------------[ IMPORT-MODULE ]-------------------#
 
 def modules():
+    print("\x1b[37m \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m CHECKING FOR UPDATES \x1b[37m")
 
-print("\x1b[37m \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m CHECKING FOR UPDATES \x1b[37m")
+    os.system('pkg update -y && pkg upgrade -y')
+    os.system('clear')
 
-os.system('pkg update -y && pkg upgrade -y')
-
-os.system('clear')
-
-try:
-
-import requests
-
-except ModuleNotFoundError:
-
-print("\x1b[37m \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m REQUESTS IS BEING INSTALLED \x1b[37m")
-
-os.system('pip install requests --quiet')
-
-print("\x1b[37m \x1b[38;5;196m[\x1b[37m>>\x1b[38;5;196m]\x1b[37m REQUESTS HAS BEEN INSTALLED \x1b[37m")
-
+    try:
+        import requests
+    except ModuleNotFoundError:
+        print("\x1b[37m \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m REQUESTS IS BEING INSTALLED \x1b[37m")
+        os.system('pip install requests --quiet')
+        print("\x1b[37m \x1b[38;5;196m[\x1b[37m>>\x1b[38;5;196m]\x1b[37m REQUESTS HAS BEEN INSTALLED \x1b[37m")
 except:exit()
 
 try:
